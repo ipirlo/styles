@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Assume all dev-tool styles are here(for ubuntu).
+# It is handy to add an empty css file to compare with the default style.
+USER_STYLE_DIR=~/.config/chromium/Default/User\ StyleSheets/
+cd "$USER_STYLE_DIR" || exit
+while true;
+do
+	select f in *
+	do
+		cp "$f" Custom.css;
+	done
+done
